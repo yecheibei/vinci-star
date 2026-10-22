@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VINCI STARS — Celebrating Comedian Davinci CFRN</title>
+<meta name="description" content="A birthday tribute to Comedian Davinci CFRN. Leave a birthday wish, or optionally send Stars as a voluntary gift.">
+<meta name="theme-color" content="#111210">
+
+<!-- Social preview. For WhatsApp/Facebook to show the image, replace the relative paths below with
+     the full https:// address of your deployed site once it is live (see README). -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="VINCI STARS — Celebrating Comedian Davinci CFRN">
+<meta property="og:description" content="Leave a birthday wish for Davinci. Sending Stars is optional.">
+<meta property="og:image" content="assets/davinci-hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23111210'/%3E%3Cpath d='M12 14h12l8 24 8-24h12L38 52H26z' fill='%23FF7945'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#stars">Skip to Stars</a>
+
+<header class="nav" id="top">
+  <a class="wordmark" href="#top" aria-label="VINCI STARS, back to top">
+    <span class="wm-a">VINCI</span><span class="wm-b">STARS</span>
+  </a>
+  <p class="nav-tag mono" data-birthday-tag>Birthday edition</p>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#wish">Leave a wish</a>
+    <a class="nav-cta" href="#stars">Send Stars</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="hero-name">
+  <div class="hero-grid">
+    <figure class="photo hero-photo" data-label="assets/davinci-hero.jpg">
+      <img src="assets/davinci-hero.jpg" alt="Comedian Davinci smiling widely in a flat cap and white shirt, holding a single red rose against a pink backdrop" fetchpriority="high" onerror="this.hidden=true">
+    </figure>
+
+    <div class="hero-copy">
+      <p class="eyebrow mono"><span data-birthday-label>Birthday edition</span><span class="dot" aria-hidden="true"></span>A tribute</p>
+      <h1 class="name" id="hero-name">
+        <span class="name-pre">Comedian</span>
+        <span class="name-main">Davinci<span class="cfrn">cfrn</span></span>
+      </h1>
+      <p class="headline">Today, the stars are his.</p>
+      <p class="intro">A little celebration for the laughter, the energy, and the person behind it all.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#stars">Send Stars</a>
+        <a class="btn-quiet" href="#wish">Just send a wish<span aria-hidden="true"> →</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRIBUTE ============ -->
+<section class="tribute" id="tribute" aria-labelledby="tribute-title">
+  <div class="tribute-grid">
+    <figure class="photo tribute-photo reveal" data-label="assets/davinci-stage.jpg">
+      <img src="assets/davinci-stage.jpg" alt="Black and white photo of Davinci on stage with a microphone, pointing toward the crowd while phone lights glow in the dark behind him" loading="lazy" onerror="this.hidden=true">
+      <figcaption class="mono">On stage</figcaption>
+    </figure>
+    <div class="tribute-copy reveal">
+      <p class="label mono">01 — Why this page exists</p>
+      <h2 id="tribute-title">Some people bring laughter into a room. Today, we send a little of that love back.</h2>
+      <p class="aside">Leave a wish. Send a few Stars if you like. All of it counts.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STARS ============ -->
+<section class="stars" id="stars" aria-labelledby="stars-title">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="label mono">02 — Stars</p>
+      <h2 id="stars-title">Send a few Stars, <em>if you want to.</em></h2>
+      <p class="sec-sub">One Star is <span data-price>₦500</span>. Send as many as you like, or none. <strong>Nothing here is required.</strong></p>
+    </header>
+
+    <div class="stars-grid">
+      <ol class="steps reveal">
+        <li><span class="mono">01</span><div><h3>Choose your Stars</h3></div></li>
+        <li><span class="mono">02</span><div><h3>Transfer it yourself</h3></div></li>
+        <li><span class="mono">03</span><div><h3>Confirm on WhatsApp</h3></div></li>
+      </ol>
+
+      <div class="picker reveal" role="group" aria-labelledby="picker-title">
+        <h3 id="picker-title" class="mono picker-title">How many Stars?</h3>
+        <div class="chips" id="chips"></div>
+
+        <div class="custom">
+          <label for="custom-qty" class="mono">Or enter your own number</label>
+          <div class="custom-row">
+            <input id="custom-qty" name="custom-qty" type="text" inputmode="numeric" autocomplete="off" placeholder="e.g. 12" aria-describedby="custom-msg">
+            <span class="unit mono">Stars</span>
+          </div>
+          <p class="field-error" id="custom-msg" role="alert"></p>
+        </div>
+
+        <div class="total" aria-live="polite" aria-atomic="true">
+          <p class="mono total-label">Your selection</p>
+          <p class="total-line"><span id="sel-label">—</span></p>
+          <p class="total-value" id="total-value">—</p>
+          <p class="mono total-formula" id="total-formula">Total = Number of Stars × <span data-price>₦500</span></p>
+        </div>
+        <p class="fine">Choosing Stars does not send money. You transfer it yourself, next.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAYMENT + CONFIRM ============ -->
+<section class="pay" id="pay" aria-labelledby="pay-title">
+  <div class="wrap">
+    <div class="transfer reveal">
+      <div>
+        <p class="label mono">03 — The transfer</p>
+        <h2 id="pay-title">Transfer to this account.</h2>
+        <p class="sec-sub">Use your own banking app. This site can't take payments or see your transfer.</p>
+      </div>
+      <dl class="acct">
+        <div><dt class="mono">Bank / platform</dt><dd id="acct-bank">PalmPay</dd></div>
+        <div><dt class="mono">Account number</dt>
+          <dd class="acct-num-row">
+            <span class="acct-num mono" id="acct-num" tabindex="0">8085861456</span>
+            <button type="button" class="btn btn-ghost" id="copy-btn" aria-describedby="copy-status">Copy number</button>
+          </dd>
+          <p class="copy-status mono" id="copy-status" role="status" aria-live="polite"></p>
+        </div>
+        <div><dt class="mono">Account name</dt><dd id="acct-name">David Oluwasegun Johnson</dd></div>
+        <div><dt class="mono">Amount for your selection</dt><dd class="acct-amount" id="acct-amount">—</dd></div>
+      </dl>
+    </div>
+
+    <p class="trust-note reveal">Transfers are checked by a person, not by this site. Never share a PIN, OTP or card details.</p>
+
+    <div class="confirm-grid">
+      <div class="confirm-intro reveal">
+        <p class="label mono">04 — Confirmation</p>
+        <h2>Already transferred?</h2>
+        <p>Fill this in and WhatsApp opens with your message ready. Nothing is stored here.</p>
+        <p class="aside">Not sending Stars? <a href="#wish">Skip to the wish.</a></p>
+      </div>
+
+      <form class="form reveal" id="confirm-form" novalidate aria-labelledby="confirm-title">
+        <h3 id="confirm-title" class="mono picker-title">Confirmation details</h3>
+
+        <div class="selected-recap" id="recap" aria-live="polite"></div>
+
+        <div class="field">
+          <label for="payer-name">Name on the transfer <span class="req">required</span></label>
+          <input id="payer-name" name="payer-name" type="text" autocomplete="name" placeholder="The name your bank shows" aria-describedby="payer-name-err" required>
+          <p class="field-error" id="payer-name-err"></p>
+        </div>
+
+        <div class="field">
+          <label for="amount">Amount you transferred <span class="req">required</span></label>
+          <input id="amount" name="amount" type="text" inputmode="numeric" autocomplete="off" placeholder="e.g. 2,500" aria-describedby="amount-err amount-hint" required>
+          <p class="field-hint" id="amount-hint"><button type="button" class="linklike" id="use-total">Use the selected total</button></p>
+          <p class="field-error" id="amount-err"></p>
+        </div>
+
+        <details class="more">
+          <summary>More details (optional)</summary>
+        <div class="field">
+          <label for="display-name">Display name <span class="opt">optional</span></label>
+          <input id="display-name" name="display-name" type="text" autocomplete="nickname" placeholder="Name to show" maxlength="60">
+        </div>
+
+        <div class="field">
+          <label for="reference">Transaction reference <span class="opt">optional</span></label>
+          <input id="reference" name="reference" type="text" autocomplete="off" placeholder="From your receipt" maxlength="80">
+        </div>
+
+        </details>
+
+        <div class="field">
+          <label for="wish-confirm">Birthday wish <span class="opt">optional</span></label>
+          <textarea id="wish-confirm" name="wish-confirm" rows="3" maxlength="280" aria-describedby="wish-confirm-count">Keep shining, Davinci! 🧡</textarea>
+          <p class="field-hint mono" id="wish-confirm-count">0 / 280</p>
+        </div>
+
+        <div class="mismatch" id="mismatch" role="alert" hidden>
+          <p id="mismatch-text"></p>
+          <div class="mismatch-actions">
+            <button type="button" class="btn btn-ghost" id="mismatch-fix"></button>
+            <button type="button" class="btn btn-ghost" id="mismatch-keep">The amount I entered is right</button>
+          </div>
+        </div>
+
+        <p class="field-error form-error" id="form-error" role="alert"></p>
+        <button type="submit" class="btn btn-primary btn-block">Prepare WhatsApp message</button>
+        <p class="fine">You still press send in WhatsApp.</p>
+        <p class="wa-after" id="wa-after" role="status" hidden></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WISH ============ -->
+<section class="wish" id="wish" aria-labelledby="wish-title">
+  <div class="wish-grid">
+    <div class="wish-copy reveal">
+      <p class="label mono">05 — Birthday wishes</p>
+      <h2 id="wish-title">Say it loud. <em>He's listening.</em></h2>
+      <p>No payment needed. It opens in WhatsApp for you to send.</p>
+
+      <form class="form form-plain" id="wish-form" novalidate aria-labelledby="wish-title">
+        <div class="field">
+          <label for="wish-name">Your name <span class="opt">optional</span></label>
+          <input id="wish-name" name="wish-name" type="text" autocomplete="nickname" maxlength="60" placeholder="Who it's from">
+        </div>
+        <div class="field">
+          <label for="wish-text">Your birthday wish</label>
+          <textarea id="wish-text" name="wish-text" rows="4" maxlength="280" placeholder="Happy birthday, Davinci…" aria-describedby="wish-text-count wish-text-err"></textarea>
+          <p class="field-hint mono" id="wish-text-count">0 / 280</p>
+          <p class="field-error" id="wish-text-err"></p>
+        </div>
+        <button type="submit" class="btn btn-primary">Open WhatsApp with my wish</button>
+        <p class="fine">You still press send in WhatsApp.</p>
+        <p class="wa-after" id="wish-after" role="status" hidden></p>
+      </form>
+    </div>
+
+    <figure class="photo wish-photo reveal" data-label="assets/davinci-secondary.jpg">
+      <img src="assets/davinci-secondary.jpg" alt="Davinci grinning in a brown blazer and red tie, one hand cupped behind his ear as if listening, against a coral backdrop" loading="lazy" onerror="this.hidden=true">
+    </figure>
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<section class="closing" aria-labelledby="closing-title">
+  <div class="closing-grid">
+    <figure class="photo closing-photo reveal" data-label="assets/davinci-portrait.jpg">
+      <img src="assets/davinci-portrait.jpg" alt="Davinci smiling down at his wristwatch, in a black leather cap, white shirt and navy tie" loading="lazy" onerror="this.hidden=true">
+    </figure>
+    <div class="closing-copy reveal">
+      <p class="label mono">Fin.</p>
+      <h2 id="closing-title">Here's to another year of impact, laughter, and bigger things ahead.</h2>
+      <p class="closing-note">Birthday wishes are always welcome, with Stars or without.</p>
+      <p class="sign">Happy birthday, <span class="sign-name">Davinci</span><span class="cfrn">cfrn</span></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p class="mono">VINCI STARS</p>
+  <p class="mono"><a href="https://siscoask.vercel.app" target="_blank" rel="noopener noreferrer">Crafted by Sisco.</a></p>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
